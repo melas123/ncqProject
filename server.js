@@ -6,6 +6,7 @@ var express = require("express"); // call express
 var app = express(); // define our app using express
 var bodyParser = require("body-parser");
 var swaggerJSDoc = require("swagger-jsdoc");
+var path = require("path");
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,12 +17,12 @@ var port = process.env.PORT || 8080; // set our port
 // swagger definition
 var swaggerDefinition = {
   info: {
-    title: "Node Swagger API",
+    title: "NCQ test API",
     version: "1.0.0",
-    description: "Demonstrating how to describe a RESTful API with Swagger"
+    description: "Describe a RESTful API with Swagger"
   },
   host: "localhost:8080",
-  basePath: "/"
+  basePath: "/api"
 };
 
 // options for the swagger docs
@@ -29,7 +30,7 @@ var options = {
   // import swaggerDefinitions
   swaggerDefinition: swaggerDefinition,
   // path to the API docs
-  apis: ["./routes/*.js"]
+  apis: ["./app/routes/*.js"]
 };
 
 // initialize swagger-jsdoc
@@ -39,7 +40,7 @@ app.get("/swagger.json", function(req, res) {
   res.setHeader("Content-Type", "application/json");
   res.send(swaggerSpec);
 });
-
+var routes = require("./app/routes/index");
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router(); // get an instance of the express Router
@@ -62,8 +63,9 @@ router.route("/workflowCategories").get(getWorkflowcategories);
 
 router.route("/workflows").post(postWorkflows);
 // REGISTER OUR ROUTES -------------------------------
+app.use(express.static(path.join(__dirname, "public")));
 // all of our routes will be prefixed with /api
-app.use("/api", router);
+app.use("/api", routes);
 
 // START THE SERVER
 // =============================================================================
