@@ -12,7 +12,8 @@
 2. Install dependencies - `npm install`
 3. Create and seed a Mysql database and update the file `knexfile.js`
 4. Sanity check - `npm start`
-5. Use postmen to call the url [http://localhost:8080/api/workflowCategories](http://localhost:8080/api/workflowCategories) and [http://localhost:8080/api/workflows](http://localhost:8080/api/workflows)
+5. Run test npm - `test app/controllers/workflowCategory.test.js`
+6. Use postmen to call the url [http://localhost:8080/api/workflowCategories](http://localhost:8080/api/workflowCategories) and [http://localhost:8080/api/workflows](http://localhost:8080/api/workflows)
 
 see images:
 
