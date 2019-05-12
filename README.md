@@ -15,8 +15,13 @@
 5. Use postmen to call the url [http://localhost:8080/api/workflowCategories](http://localhost:8080/api/workflowCategories) and [http://localhost:8080/api/workflows](http://localhost:8080/api/workflows)
 
 see images:
+
 ![doc page](https://github.com/melas123/ncqProject/blob/master/screeshots/doc_page.png)
-![Workflow Catgories](https://github.com/melas123/ncqProject/master/screenshots/getWorkflowCategories.png)
-![Workflows](https://github.com/melas123/ncqProject/master/screenshots/postWorkflows.png)
-![Workflow Catgories postmen](https://github.com/melas123/ncqProject/master/screenshots/getWorkflowCategoriesPostmen.png)
-![Worflow postmen](https://github.com/melas123/ncqProject/master/screenshots/postWorkflowsPostmen.png)
+
+![Workflow Catgories](https://github.com/melas123/ncqProject/blob/master/screenshots/getWorkflowCategories.png)
+
+![Workflows](https://github.com/melas123/ncqProject/blob/master/screenshots/postWorkflows.png)
+
+![Workflow Catgories postmen](https://github.com/melas123/ncqProject/blob/master/screenshots/getWorkflowCategoriesPostmen.png)
+
+![Worflow postmen](https://github.com/melas123/ncqProject/blob/master/screenshots/postWorkflowsPostmen.png)
